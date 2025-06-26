@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+/* Calculator Box */
+.calculator {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Output Display */
+.output-calculator {
+  background-color: #121212;
+  color: #00ffcc;
+  padding: 1.2rem;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: inset 0 0 10px #000;
+}
+
+/* Button Rows */
+.operators {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Base Button Styles */
+.adding,
+.plus-minius,
+.equal-to {
+  flex: 1;
+  margin: 0 6px;
+  padding: 0.54rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 14px;
+  background: #2e2e2e;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 2px 8px #000, -2px -2px 5px #333;
+}
+
+/* Hover Effects */
+.adding:hover,
+.plus-minius:hover,
+.equal-to:hover {
+  background: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #00ffc8;
+}
+
+/* Special Buttons */
+.adding[data-value="AC"] {
+  background: #ff3e3e;
+  color: white;
+}
+.adding[data-value="AC"]:hover {
+  box-shadow: 0 0 10px #ff3e3e;
+}
+
+.equal-to {
+  background: #0f0;
+  color: #000;
+  font-weight: bold;
+}
+.equal-to:hover {
+  background: #00e676;
+  box-shadow: 0 0 15px #00ff99;
+}
+/* Responsive Design */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 1.2rem;
+  }
+  .adding,
+  .plus-minius,
+  .equal-to {
+    font-size: 1.1rem;
+    padding: 0.9rem;
+  }
+
+  .output-calculator {
+    font-size: 1.5rem;
+  }
+}
